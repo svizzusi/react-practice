@@ -3,7 +3,7 @@ import { GiHamburgerMenu } from 'react-icons/Gi';
 import { AiOutlineClose } from 'react-icons/Ai';
 import { useState } from 'react';
 
-const NavBar = () => {
+const NavBar = ({openLoginModal}) => {
    const [open, setOpen] = useState(true)
 
    const styles = {
@@ -22,6 +22,7 @@ const NavBar = () => {
             </div>
             <div className='nav-links' style={styles}>
                 <NavLink to='/'>Home</NavLink>
+                <NavLink onClick={openLoginModal}>Login</NavLink>
                 <NavLink to='/about'>About</NavLink>
                 <NavLink to='/contact'>Contact</NavLink>
                 <NavLink to='/departments'>Departments</NavLink>

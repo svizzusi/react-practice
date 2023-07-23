@@ -1,0 +1,54 @@
+.loginBg {
+    backdrop-filter: blur(5px) saturate(0%);
+    -webkit-backdrop-filter: blur(5px) saturate(0%);
+    background-color: rgba(17, 25, 40, 0.25);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginBg form {
+    height: 300px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    background: black;
+    border-radius: 8px;
+}
+
+.loginBg form h2 {
+    color: white;
+    font-size: 20px;
+}
+
+.loginBg input {
+    border-radius: 8px;
+    padding: 8px 10px;
+    outline: none;
+    border: none;
+}
+
+.loginBg button {
+    width: 70px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    background: white;
+    color: black;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.loginBg button:hover {
+    background: red;
+}

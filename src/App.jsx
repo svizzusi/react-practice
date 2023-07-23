@@ -14,12 +14,13 @@ import Home from "./components/Home/Home";
 import Footer from "./components/Footer/Footer";
 import NavBar from "./components/NavBar/NavBar";
 import { Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import FrontEnd from "./components/FrontEnd/FrontEnd";
 import BackEnd from "./components/BackEnd/BackEnd";
 import DevOps from "./components/DevOps/DevOps";
 import Loading from './components/Loading/Loading';
 import ProfileDashboard from './components/Profile/ProfileDashboard'
+
 
 const LoadAtTheTop = () => {
     const location = useLocation();
@@ -32,12 +33,28 @@ const LoadAtTheTop = () => {
 const App = () => {
     const userName = 'Stephen'
     const userId = 'xyz1'
+
+    const [openLogin, setOpenLogin] = useState(false)
+
+        function openLoginModal() {
+            setOpenLogin(prevOpenLogin => !prevOpenLogin);
+        }
+        function closeLoginModal() {
+            setOpenLogin(prevOpenLogin => !prevOpenLogin);
+        }
+
     return (
         <>
-            <NavBar />
+            <NavBar openLoginModal={openLoginModal}/>
             <LoadAtTheTop />
             <Routes>
-                <Route path='/' element={<Home />}></Route>
+                <Route 
+                    path='/' 
+                    element={<Home
+                    openLogin={openLogin}
+                    closeLoginModal={closeLoginModal} 
+                    />}
+                ></Route>
                 <Route path='about' element={
                     <React.Suspense fallback={<Loading />}>
                         <About />
