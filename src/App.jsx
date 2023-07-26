@@ -31,8 +31,8 @@ const LoadAtTheTop = () => {
 }
 
 const App = () => {
-    const userName = 'Stephen'
-    const userId = 'xyz1'
+    const [userName, setUserName] = useState('')
+    const [userId, setUserId] = useState('')
 
     const [openLogin, setOpenLogin] = useState(false)
 
@@ -53,6 +53,7 @@ const App = () => {
                     element={<Home
                     openLogin={openLogin}
                     closeLoginModal={closeLoginModal} 
+                    setUserName={setUserName}
                     />}
                 ></Route>
                 <Route path='about' element={
