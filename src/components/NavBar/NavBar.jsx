@@ -5,15 +5,12 @@ import { useState } from 'react';
 
 const NavBar = ({openLoginModal}) => {
    const [open, setOpen] = useState(true)
-
    const styles = {
     display: open ? 'none': 'flex'
    }
-  
    function toggle() {
     setOpen(prevOpen => !prevOpen)
    }
-
     return (
         <nav className='navigation'>
             <h1>BrowserRouter</h1>
@@ -31,5 +28,4 @@ const NavBar = ({openLoginModal}) => {
         </nav>
     )
 }
-
 export default NavBar;
