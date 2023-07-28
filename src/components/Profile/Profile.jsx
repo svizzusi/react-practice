@@ -8,5 +8,4 @@ const Profile = ({userName}) => {
     </div>
   )
 };
-
 export default Profile;
