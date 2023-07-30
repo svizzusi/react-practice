@@ -1,0 +1,19 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.input {
+    padding: 8px 10px;
+}
+
+.submit {
+    padding: 8px 10px;
+    border-radius: 8px;
+}
+
+.submit:disabled {
+    visibility: hidden;
+}
