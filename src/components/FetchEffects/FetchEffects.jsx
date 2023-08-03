@@ -10,6 +10,7 @@ const FetchEffects = () => {
         .catch(err => 
             console.log('Error fetching', err))
     }
+    
     useEffect(() => {
         getData()
         // fetch('https://randomuser.me/api/?results=1')
